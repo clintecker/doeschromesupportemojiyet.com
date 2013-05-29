@@ -1,0 +1,9 @@
+{
+  "class": [ "google-chrome" ],
+  "properties": {
+      "supports-emoji": false
+  },
+  "links": [
+    { "rel": [ "self" ], "href": "http://doeschromesupportemoji.com/" },
+  ]
+}

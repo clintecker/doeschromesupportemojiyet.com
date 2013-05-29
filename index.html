@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Does Google Chrome Support Emoji Yet?</title>
+    <link rel="stylesheet" type="text/css" media="all" href="normalize.css" />
+</head>
+<body>
+    <section id="well"><a href="https://code.google.com/p/chromium/issues/detail?id=62435">MAYBE</a></section>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    success = function(data) {
+        if (data['properties']['supports-emoji'] == true) {
+            $("#well").text('YES');
+        } else {
+            $("#well").text('NO');
+        }
+    };
+    $.ajax({
+        dataType: "json",
+        url: "index.json",
+        success: success
+        });
+    </script>
+</body>
+</html>
