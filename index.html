@@ -6,15 +6,16 @@
     <link rel="stylesheet" type="text/css" media="all" href="normalize.css" />
 </head>
 <body>
-    <section id="well"><a href="https://code.google.com/p/chromium/issues/detail?id=62435">MAYBE</a></section>
+    <section id="well"><a href="">MAYBE</a></section>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
     success = function(data) {
         if (data['properties']['supports-emoji'] == true) {
-            $("#well").text('YES');
+            $("#well a").text('YES');
         } else {
             $("#well").text('NO');
         }
+        $("#well a").attr('href', data['links']['bug-report']);
     };
     $.ajax({
         dataType: "json",

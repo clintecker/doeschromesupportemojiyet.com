@@ -3,7 +3,7 @@
   "properties": {
       "supports-emoji": false
   },
-  "links": [
-    { "rel": [ "self" ], "href": "http://doeschromesupportemoji.com/" },
-  ]
+  "links": {
+    "bug-report": "https://code.google.com/p/chromium/issues/detail?id=62435"
+  }
 }
